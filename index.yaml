@@ -51,4 +51,15 @@ entries:
     urls:
     - https://github.com/mogensen/cert-checker/releases/download/cert-checker-helm-chart-0.0.1/cert-checker-0.0.1.tgz
     version: 0.0.1
-generated: "2021-06-21T12:47:05.639495808Z"
+  voice-cert-checker:
+  - apiVersion: v2
+    appVersion: v0.0.1
+    created: "2022-01-29T05:50:50.771093059Z"
+    description: A tool to expose SSL Certificate information as prometheus metrics.
+    digest: 8be30abc81880605f714df7fa73e12c110740050a8c4dbe7ee162a3ed1ef5c90
+    name: voice-cert-checker
+    type: application
+    urls:
+    - https://github.com/rockosocko/voice-cert-checker/releases/download/cert-checker-helm-chart-0.0.1/voice-cert-checker-0.0.1.tgz
+    version: 0.0.1
+generated: "2022-01-29T05:50:50.771107859Z"
