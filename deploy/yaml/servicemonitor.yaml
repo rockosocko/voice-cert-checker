@@ -2,15 +2,15 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: cert-checker
+  name: voice-cert-checker
   labels:
-    app.kubernetes.io/name: cert-checker
-    app.kubernetes.io/instance: cert-checker
-    app.kubernetes.io/version: "v0.0.6"
+    app.kubernetes.io/name: voice-cert-checker
+    app.kubernetes.io/instance: voice-cert-checker
+    app.kubernetes.io/version: "v0.0.1"
     release: prometheus
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/name: cert-checker
+      app.kubernetes.io/name: voice-cert-checker
   endpoints:
   - port: metrics-http

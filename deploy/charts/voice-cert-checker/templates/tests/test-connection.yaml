@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "voice-cert-checker.fullname" . }}-test-connection"
+  labels:
+    {{- include "voice-cert-checker.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "voice-cert-checker.fullname" . }}:{{ .Values.service.port }}/metrics']
+  restartPolicy: Never

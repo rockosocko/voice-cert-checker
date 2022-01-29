@@ -1,6 +1,6 @@
-# cert-checker
+# voice-cert-checker
 
-![Version: 0.0.6](https://img.shields.io/badge/Version-0.0.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.0.6](https://img.shields.io/badge/AppVersion-v0.0.6-informational?style=flat-square)
+![Version: 0.0.1](https://img.shields.io/badge/Version-0.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.0.1](https://img.shields.io/badge/AppVersion-v0.0.1-informational?style=flat-square)
 
 A tool to expose SSL Certificate information as prometheus metrics.
 
@@ -31,12 +31,12 @@ A tool to expose SSL Certificate information as prometheus metrics.
 | fullnameOverride | string | `""` |  |
 | grafanaDashboard.enabled | bool | `false` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"mogensen/cert-checker"` |  |
+| image.repository | string | `"rockosocko/voice-cert-checker"` |  |
 | imagePullSecrets | list | `[]` |  |
 | ingress.annotations | object | `{}` |  |
 | ingress.enabled | bool | `false` |  |
-| ingress.hosts[0].host | string | `"cert-checker.local"` |  |
-| ingress.hosts[0].paths[0].backend.serviceName | string | `"cert-checker.local"` |  |
+| ingress.hosts[0].host | string | `"voice-cert-checker.local"` |  |
+| ingress.hosts[0].paths[0].backend.serviceName | string | `"voice-cert-checker.local"` |  |
 | ingress.hosts[0].paths[0].backend.servicePort | int | `8081` |  |
 | ingress.hosts[0].paths[0].path | string | `"/"` |  |
 | ingress.tls | list | `[]` |  |

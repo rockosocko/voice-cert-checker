@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/mogensen/cert-checker/pkg/models"
+	"github.com/rockosocko/voice-cert-checker/pkg/models"
 	"gopkg.in/yaml.v2"
 )
 

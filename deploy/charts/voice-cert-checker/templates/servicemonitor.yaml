@@ -2,16 +2,16 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: {{ include "cert-checker.fullname" . }}
+  name: {{ include "voice-cert-checker.fullname" . }}
   labels:
-    {{- include "cert-checker.labels" . | nindent 4 }}
+    {{- include "voice-cert-checker.labels" . | nindent 4 }}
     {{- if .Values.serviceMonitor.additionalLabels }}
     {{- .Values.serviceMonitor.additionalLabels | toYaml | nindent 4 }}
     {{- end }}
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "cert-checker.fullname" . }}
+      app.kubernetes.io/name: {{ include "voice-cert-checker.fullname" . }}
   endpoints:
   - port: metrics-http
 {{- end }}

@@ -913,7 +913,7 @@
     ]
   },
   "timezone": "",
-  "title": "Certificate Checker",
-  "uid": "cert-checker",
+  "title": "Voice Certificate Checker",
+  "uid": "voice-cert-checker",
   "version": 2
 }

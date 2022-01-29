@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "cert-checker.fullname" . }}
+  name: {{ include "voice-cert-checker.fullname" . }}
   labels:
-    {{- include "cert-checker.labels" . | nindent 4 }}
+    {{- include "voice-cert-checker.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "cert-checker.selectorLabels" . | nindent 6 }}
+      {{- include "voice-cert-checker.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       annotations:
@@ -19,25 +19,25 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "cert-checker.selectorLabels" . | nindent 8 }}
+        {{- include "voice-cert-checker.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "cert-checker.serviceAccountName" . }}
+      serviceAccountName: {{ include "voice-cert-checker.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       volumes:
         - name: config-volume
           configMap:
-            name: {{ include "cert-checker.fullname" . }}
+            name: {{ include "voice-cert-checker.fullname" . }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          command: ["/app/cert-checker", "-c", "/data/config.yaml"]
+          command: ["/app/voice-cert-checker", "-c", "/data/config.yaml"]
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           volumeMounts:
           - name: config-volume

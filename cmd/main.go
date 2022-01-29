@@ -7,7 +7,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/mogensen/cert-checker/cmd/app"
+	"github.com/rockosocko/voice-cert-checker/cmd/app"
 	"github.com/sirupsen/logrus"
 )
 

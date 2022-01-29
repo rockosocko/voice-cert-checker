@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/mogensen/cert-checker/pkg/models"
+	"github.com/rockosocko/voice-cert-checker/pkg/models"
 	"github.com/sirupsen/logrus"
 )
 

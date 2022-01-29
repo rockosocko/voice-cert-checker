@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mogensen/cert-checker/pkg/models"
+	"github.com/rockosocko/voice-cert-checker/pkg/models"
 	"github.com/sirupsen/logrus"
 
 	"github.com/prometheus/client_golang/prometheus"
@@ -35,7 +35,7 @@ type Metrics struct {
 func New(log *logrus.Entry) *Metrics {
 	certValidity := prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
-			Namespace: "cert_checker",
+			Namespace: "voice_cert_checker",
 			Name:      "is_valid",
 			Help:      "Detailing if the certificate served by the server at the dns is valid",
 		},
@@ -46,7 +46,7 @@ func New(log *logrus.Entry) *Metrics {
 
 	certExpiration := prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
-			Namespace: "cert_checker",
+			Namespace: "voice_cert_checker",
 			Name:      "expire_time",
 			Help:      "Detailing when a certificate is set to expire",
 		},

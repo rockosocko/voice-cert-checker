@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/genkiroid/cert"
-	"github.com/mogensen/cert-checker/pkg/metrics"
-	"github.com/mogensen/cert-checker/pkg/models"
+	"github.com/rockosocko/voice-cert-checker/pkg/metrics"
+	"github.com/rockosocko/voice-cert-checker/pkg/models"
 	"github.com/sirupsen/logrus"
 )
 

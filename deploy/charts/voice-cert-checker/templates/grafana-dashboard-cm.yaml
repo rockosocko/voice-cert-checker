@@ -1,0 +1,12 @@
+{{- if or  .Values.grafanaDashboard.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "voice-cert-checker.fullname" . }}-grafana-dashboard
+  labels:
+    grafana_dashboard: "1"
+    {{- include "voice-cert-checker.labels" . | nindent 4 }}
+data:
+  voice-cert-checker.json: |-
+  {{- .Files.Get "dashboards/voice-cert-checker.json" | nindent 4 }}
+{{- end }}

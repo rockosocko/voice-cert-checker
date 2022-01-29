@@ -6,8 +6,8 @@ import (
 	"os"
 	"sync"
 
-	"github.com/mogensen/cert-checker/pkg/controller"
-	"github.com/mogensen/cert-checker/pkg/web"
+	"github.com/rockosocko/voice-cert-checker/pkg/controller"
+	"github.com/rockosocko/voice-cert-checker/pkg/web"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

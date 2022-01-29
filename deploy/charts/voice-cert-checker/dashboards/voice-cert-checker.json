@@ -14,7 +14,7 @@
       }
     ]
   },
-  "description": "Dashboard for viewing the status of production certificates. To be used with the cert-checker project.https://github.com/mogensen/cert-checker",
+  "description": "Dashboard for viewing the status of production certificates. To be used with the cert-checker project.https://github.com/rockosocko/voice-cert-checker",
   "editable": true,
   "gnetId": 12833,
   "graphTooltip": 0,
@@ -913,7 +913,7 @@
     ]
   },
   "timezone": "",
-  "title": "Certificate Checker",
-  "uid": "cert-checker",
+  "title": "Voice Certificate Checker",
+  "uid": "voice-cert-checker",
   "version": 2
 }

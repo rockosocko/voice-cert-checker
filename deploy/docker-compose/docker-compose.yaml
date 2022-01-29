@@ -18,8 +18,8 @@ services:
     volumes:
     - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
 
-  cert-checker:
-    image: mogensen/cert-checker:v0.0.6
+  voice-cert-checker:
+    image: rockosocko/voice-cert-checker:v0.0.1
     ports:
     - 8080:8080
     - 8081:8081

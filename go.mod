@@ -1,4 +1,4 @@
-module github.com/mogensen/cert-checker
+module github.com/rockosocko/voice-cert-checker
 
 go 1.16
 
