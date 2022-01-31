@@ -24,4 +24,4 @@ services:
     - 8080:8080
     - 8081:8081
     volumes:
-    - ./cert-checker/config.yaml:/app/config.yaml:ro
+    - ./voice-cert-checker/config.yaml:/app/config.yaml:ro

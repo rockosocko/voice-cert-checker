@@ -68,7 +68,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "count(cert_checker_is_valid == 0)",
+          "expr": "count(voice_cert_checker_is_valid == 0)",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -125,7 +125,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "count( ((cert_checker_expire_time{} - time()) / 86400 >= 0) < 30)",
+          "expr": "count( ((voice_cert_checker_expire_time{} - time()) / 86400 >= 0) < 30)",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -186,7 +186,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "count(cert_checker_is_valid{tls_min_version=\"SSLv3\"})",
+          "expr": "count(voice_cert_checker_is_valid{tls_min_version=\"SSLv3\"})",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -247,7 +247,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "count(cert_checker_is_valid{tls_min_version=\"TLS 1.0\"})",
+          "expr": "count(voice_cert_checker_is_valid{tls_min_version=\"TLS 1.0\"})",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -308,7 +308,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "count(cert_checker_is_valid{tls_min_version=\"TLS 1.1\"})",
+          "expr": "count(voice_cert_checker_is_valid{tls_min_version=\"TLS 1.1\"})",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -364,7 +364,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "count(cert_checker_is_valid{tls_min_version=\"TLS 1.2\"})",
+          "expr": "count(voice_cert_checker_is_valid{tls_min_version=\"TLS 1.2\"})",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -420,7 +420,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "count(cert_checker_is_valid{tls_min_version=\"TLS 1.3\"})",
+          "expr": "count(voice_cert_checker_is_valid{tls_min_version=\"TLS 1.3\"})",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -475,7 +475,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "count(cert_checker_is_valid > 0)",
+          "expr": "count(voice_cert_checker_is_valid > 0)",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -618,7 +618,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "sum by(dns, issuer, not_before, not_after, cert_error, tls_min_version) (cert_checker_is_valid) == 0",
+          "expr": "sum by(dns, issuer, not_before, not_after, cert_error, tls_min_version) (voice_cert_checker_is_valid) == 0",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -759,7 +759,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "(cert_checker_expire_time{} - time()) / 60/60/24",
+          "expr": "(voice_cert_checker_expire_time{} - time()) / 60/60/24",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -855,7 +855,7 @@
       "pluginVersion": "7.4.3",
       "targets": [
         {
-          "expr": "sum by(dns, issuer, not_before, not_after, cert_error, tls_min_version) (cert_checker_is_valid) == 1",
+          "expr": "sum by(dns, issuer, not_before, not_after, cert_error, tls_min_version) (voice_cert_checker_is_valid) == 1",
           "format": "table",
           "instant": true,
           "interval": "",
